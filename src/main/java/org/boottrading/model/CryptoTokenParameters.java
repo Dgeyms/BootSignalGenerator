@@ -4,8 +4,13 @@ package org.boottrading.model;
  * parameters tokens
  */
 public class CryptoTokenParameters {
-    private String nameToken;
-    private String MarketPair; // Торговая пара
-    private int periodEMALong;
-    private int periodEMAShort;
+    public String nameToken;
+    public int periodEMALong = 21;
+    public int periodEMAShort = 5;
+
+    public CryptoTokenParameters(String nameToken, int periodEMALong, int periodEMAShort) {
+        this.nameToken = nameToken;
+        this.periodEMALong = periodEMALong;
+        this.periodEMAShort = periodEMAShort;
+    }
 }
