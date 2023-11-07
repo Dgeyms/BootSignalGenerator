@@ -2,16 +2,14 @@ package org.boottrading.model;
 
 import org.boottrading.service.GeneratorData;
 
+import java.util.ArrayList;
+
 /**
  * params token ARB
  */
-public class ARB extends CryptoTokenParameters {
-    private String marketPair = "ARB/USDT"; // Торговая пара
-    private GeneratorData quoteTokenARB;
+public class ARB extends Token{
 
-    public ARB(String nameToken, int periodEMALong, int periodEMAShort, String marketPair) {
-        super(nameToken, periodEMALong, periodEMAShort);
-        this.marketPair = marketPair;
-        this.quoteTokenARB = new GeneratorData();
+    public ARB(ArrayList<Double> quoteDataList, String nameToken) {
+        super(quoteDataList, nameToken);
     }
 }
