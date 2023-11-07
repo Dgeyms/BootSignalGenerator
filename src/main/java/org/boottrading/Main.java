@@ -2,7 +2,7 @@ package org.boottrading;
 
 
 import org.boottrading.model.ARB;
-import org.boottrading.service.EMACalculator;
+import org.boottrading.service.indicators.EMACalculator;
 import org.boottrading.service.GeneratorData;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package org.boottrading.service;
+package org.boottrading.service.indicators;
 
 
 import java.util.ArrayList;
