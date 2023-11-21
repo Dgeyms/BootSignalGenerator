@@ -3,7 +3,7 @@ package org.boottrading.service.strategies;
 import java.util.ArrayList;
 
 /**
- * Implementation of the strategy EMA + KDJ
+ * Implementation of the strategy EMA + MACD + KDJ
  */
 public class TradingStrategyEmaKdj {
     private ArrayList<Double> emaLongData;
@@ -36,11 +36,11 @@ public class TradingStrategyEmaKdj {
         double emaShortValue = emaShortData.get(dataSize - 1);
 
         if(emaShortValue > emaLongValue){
-            return "EMA 5 выше EMA 21. Восходящий тренд";
+            return "UPWARD_TREND";
         }else if(emaShortValue < emaLongValue){
-            return "EMA 5 ниже EMA 21. Нисходящий тренд";
+            return "DOWNWARD_TREND";
         }else{
-            return "EMA 5 равны EMA 21.";
+            return "EQUAL_TREND";
         }
     }
 

@@ -6,13 +6,30 @@ import java.util.ArrayList;
  * parameters tokens
  */
 public class Token {
-    public String nameToken;
-    public String marketPair; // Торговая пара
-    public ArrayList<Double> quoteDataList; // quote data token
+    private final String nameToken;
+    private String marketPair; // Торговая пара
+    private final ArrayList<Double> quoteDataList; // data close price token
+    private String time = "02.3.2023";
 
 
     public Token(ArrayList<Double> quoteDataList, String nameToken) {
         this.nameToken = nameToken;
         this.quoteDataList = quoteDataList;
+    }
+
+    public String getNameToken() {
+        return nameToken;
+    }
+
+    public String getMarketPair() {
+        return marketPair;
+    }
+
+    public ArrayList<Double> getQuoteDataList() {
+        return quoteDataList;
+    }
+
+    public String getTime() {
+        return time;
     }
 }

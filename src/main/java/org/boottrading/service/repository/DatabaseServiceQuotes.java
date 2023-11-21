@@ -1,4 +1,7 @@
-package org.boottrading.repository;
+package org.boottrading.service.repository;
+
+import org.boottrading.model.ARB;
+import org.boottrading.model.Token;
 
 /**
  * Service for working with the database of cryptocurrency quotations
@@ -6,5 +9,5 @@ package org.boottrading.repository;
  */
 public interface DatabaseServiceQuotes{
     // save quotes in database
-    void saveQuotesInDatabase();
+    void saveClosePricesInDatabase(Token token);
 }

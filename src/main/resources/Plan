@@ -1,0 +1,13 @@
+Plan works:
++1. class EMAIndikator создает на м два EMA5 ind 21
++2 создать соединение с базой данных
+
+- change database postgresql
+- загрузить котировки цен закрытия in database (я тут)
+- берем данные цен закрытия и строим EMA end KDJ
+- загружаем параметры EMA end KDJ в базу данных
+
+
+3. KDJIndikator создает три линии с разными периодами
+4. записать их в базу данных
+5. потом из базы данных мы их берем и в class TradingStrategyEmaKdj генерируем сигнал

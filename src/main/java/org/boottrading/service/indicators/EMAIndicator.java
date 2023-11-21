@@ -6,14 +6,17 @@ import java.util.ArrayList;
 /**
  * The class calculates exponential moving averages based on quotes.
  */
-public class EMACalculator {
+public class EMAIndicator {
     private final ArrayList<Double>  quoteDataList; // quote data token
     private final int  period;
 
-    public EMACalculator(ArrayList<Double>  quoteDataList, int period) {
+    public EMAIndicator(ArrayList<Double>  quoteDataList, int period) {
         this.quoteDataList = quoteDataList;
         this.period = period;
+    }
 
+    public ArrayList<Double> getQuoteDataList() {
+        return quoteDataList;
     }
 
     public ArrayList<Double> calculateEMA() {
