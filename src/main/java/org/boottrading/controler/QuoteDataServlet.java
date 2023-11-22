@@ -1,6 +1,5 @@
 package org.boottrading.controler;
 
-import org.boottrading.model.ARB;
 import org.boottrading.model.Token;
 import org.boottrading.service.GeneratorData;
 import org.boottrading.service.indicators.EMAIndicator;
@@ -17,23 +16,22 @@ public class QuoteDataServlet {
 
     public void play() {
         // генерация данных (потом будут приходить с биржи)
-        generatorData();
-        saveClosingPricesInDatabase();
-        //generateEMA5ForARB();
+        Token tokenARB = generatorDataPriceClose();
+        saveClosingPricesInDatabase(tokenARB);
+        //generateEMA_5();
         //checkDataEMA5ForARB();
         //generateEMA21ForARB();
         //checkDataEMA21ForARB();
     }
 
-    // method generator data token ARB
-    private void generatorData() {
+    private Token generatorDataPriceClose() {
         GeneratorData generatorData = new GeneratorData();
-        this.token = new ARB(generatorData.generateData(), "ARB");
+        Token token = new Token(generatorData.generateData(), "ARB");
+        return token;
     }
-
     // method create EMA_5
-    private void generateEMA5ForARB() {
-        emaIndicator5 = new EMAIndicator(token.getQuoteDataList(), 5);
+    private void generateEMA_5() {
+        emaIndicator5 = new EMAIndicator(token.getQuoteDataList(), 5 );
     }
 
     // method create EMA_21
@@ -41,10 +39,9 @@ public class QuoteDataServlet {
         emaIndicator21 = new EMAIndicator(token.getQuoteDataList(), 21);
     }
 
-    // method save closing prices in database Quotes
-    private void saveClosingPricesInDatabase() {
+    private void saveClosingPricesInDatabase(Token tokenARB) {
         DatabaseServiceQuotes databaseServiceQuotes = new DatabaseServiceQuotesImpl();
-        databaseServiceQuotes.saveClosePricesInDatabase(token);
+        databaseServiceQuotes.saveClosePricesInDatabase(tokenARB);
     }
 
     // method check EMA_5 ARB

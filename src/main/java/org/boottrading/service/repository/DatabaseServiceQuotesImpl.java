@@ -33,18 +33,18 @@ public class DatabaseServiceQuotesImpl implements DatabaseServiceQuotes {
 
     // method save closing prices in database Quotes
     public void saveClosePricesInDatabase(Token token) {
-        String insertQuery = "INSERT INTO crypto_quotes (close_price) VALUES (?)";
+        String insertQuery = "INSERT INTO crypto_quotes (close_price, name_token) VALUES (?, ?)";
 
         try (Connection connection = PostgreSQLConnection.getConnection()){
              PreparedStatement preparedStatement = connection.prepareStatement(insertQuery);
 
              for (int i = 0; i < token.getQuoteDataList().size(); i++) {
-                    //preparedStatement.setString(1, token.getTime());
-                    //preparedStatement.setString(2, token.getNameToken()); //symbol
-                    preparedStatement.setBigDecimal(1, BigDecimal.valueOf(token.getQuoteDataList().get(i)));
+                 preparedStatement.setBigDecimal(1, BigDecimal.valueOf(token.getQuoteDataList().get(i)));
+                 preparedStatement.setString(2, token.getNameToken()); //symbol token
+                 //preparedStatement.setString(1, token.getTime());
 
-                    int numder = preparedStatement.executeUpdate();
-                    if(numder > 0){
+                    int affectedRows = preparedStatement.executeUpdate();
+                    if(affectedRows > 0){
                         System.out.println("Запись в базу данных прошла успешно");
                     }else{
                         System.out.println("Данные НЕ записались в базу данных");

@@ -13,14 +13,13 @@ public class Token {
 
 
     public Token(ArrayList<Double> quoteDataList, String nameToken) {
-        this.nameToken = nameToken;
         this.quoteDataList = quoteDataList;
+        this.nameToken = nameToken;
     }
 
     public String getNameToken() {
         return nameToken;
     }
-
     public String getMarketPair() {
         return marketPair;
     }

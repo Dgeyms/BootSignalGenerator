@@ -1,6 +1,5 @@
 package org.boottrading.service.repository;
 
-import org.boottrading.model.ARB;
 import org.boottrading.model.Token;
 
 /**

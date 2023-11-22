@@ -9,6 +9,7 @@ import java.util.ArrayList;
 public class EMAIndicator {
     private final ArrayList<Double>  quoteDataList; // quote data token
     private final int  period;
+    //private final String  token;
 
     public EMAIndicator(ArrayList<Double>  quoteDataList, int period) {
         this.quoteDataList = quoteDataList;

@@ -26,7 +26,7 @@ public class DatabaseServiceQuotesImplTest {
         // Create mock-object для вашего интерфейса Token
         Token token = mock(Token.class);
         when(token.getTime()).thenReturn("2023-11-01"); // Замените на реальные значения
-        when(token.getNameToken()).thenReturn("BTC"); // Замените на реальные значения
+        //when(token.getNameToken()).thenReturn("BTC"); // Замените на реальные значения
         when(token.getQuoteDataList()).thenReturn(new ArrayList<>(List.of(100.0, 101.0, 102.0))); // Замените на реальные значения
 
         // Создаем экземпляр вашего класса для тестирования
