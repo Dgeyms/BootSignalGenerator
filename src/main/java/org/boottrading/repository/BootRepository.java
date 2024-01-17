@@ -1,5 +1,5 @@
 package org.boottrading.repository;
 
 public interface BootRepository {
-    void saveBootDataBase();
+    void saveBootDataBase(String nameBoot);
 }
