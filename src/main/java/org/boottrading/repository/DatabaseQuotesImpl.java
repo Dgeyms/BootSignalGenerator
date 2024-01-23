@@ -3,10 +3,10 @@ package org.boottrading.repository;
 /**
  * Class implementing the interface DatabaseServiceQuotes
  */
-public class DatabaseServiceQuotesImpl {
+public class DatabaseQuotesImpl {
 
     // save quotes in database
-    void saveQuotesInDatabase(){
+    void saveQuotesInDatabase() {
 
     }
 }

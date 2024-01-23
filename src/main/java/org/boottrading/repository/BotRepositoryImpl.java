@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 import org.boottrading.util.PostgresJdbcConnection;
 
-public class BootRepositoryImpl implements BootRepository {
+public class BotRepositoryImpl implements BotRepository {
 
     public void saveBootDataBase(String nameBoot) {
         try (Connection connection = DriverManager.getConnection(PostgresJdbcConnection.DB_URL,
