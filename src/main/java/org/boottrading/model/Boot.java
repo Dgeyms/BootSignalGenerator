@@ -1,6 +1,7 @@
 package org.boottrading.model;
 
 public class Boot {
+    private Long id;
     private String nameBoot;
 
     public Boot(String nameBoot) {
@@ -13,6 +14,14 @@ public class Boot {
 
     public void setNameBoot(String nameBoot) {
         this.nameBoot = nameBoot;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
 }

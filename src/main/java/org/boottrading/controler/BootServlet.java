@@ -20,7 +20,7 @@ public class BootServlet extends HttpServlet {
         String nameBoot = request.getParameter("nameBoot");
         Boot newBoot = new Boot(nameBoot);
 
-        bootService.saveBoot(newBoot.getNameBoot);
+        bootService.saveBoot(newBoot.getNameBoot());
     }
 
 }

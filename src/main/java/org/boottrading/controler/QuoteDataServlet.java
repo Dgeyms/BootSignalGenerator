@@ -1,6 +1,5 @@
 package org.boottrading.controler;
 
-import org.boottrading.model.ARB;
 import org.boottrading.model.Token;
 import org.boottrading.service.GeneratorData;
 import org.boottrading.service.indicators.EMAIndicator;
@@ -19,10 +18,10 @@ public class QuoteDataServlet {
         // генерация данных (потом будут приходить с биржи)
         generatorData();
         saveClosingPricesInDatabase();
-        //generateEMA5ForARB();
-        //checkDataEMA5ForARB();
-        //generateEMA21ForARB();
-        //checkDataEMA21ForARB();
+        // generateEMA5ForARB();
+        // checkDataEMA5ForARB();
+        // generateEMA21ForARB();
+        // checkDataEMA21ForARB();
     }
 
     // method generator data token ARB
