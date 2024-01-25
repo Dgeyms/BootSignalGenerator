@@ -1,11 +1,11 @@
-package org.boottrading.service.repository;
+package org.boottrading.service;
 
 import java.util.List;
 
-import org.boottrading.repository.BotParametersRepository;
+import org.boottrading.repository.TokenPairRepository;
 
 public class BotParametersService {
-    BotParametersRepository botParametersRepositoty = new BotParametersRepository();
+    TokenPairRepository botParametersRepositoty = new TokenPairRepository();
 
     public List<String> getTokenPairFromDataBase() {
         return botParametersRepositoty.getTokenPairFromDataBase();

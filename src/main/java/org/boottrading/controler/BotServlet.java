@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.rmi.ServerException;
 
 import org.boottrading.model.Boot;
-import org.boottrading.service.repository.BotService;
+import org.boottrading.service.BotService;
 
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;

@@ -1,4 +1,4 @@
-package org.boottrading.service.repository;
+package org.boottrading.service;
 
 import org.boottrading.repository.BotRepository;
 import org.boottrading.repository.BotRepositoryImpl;

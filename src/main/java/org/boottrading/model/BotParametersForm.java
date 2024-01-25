@@ -2,7 +2,7 @@ package org.boottrading.model;
 
 import java.util.List;
 
-import org.boottrading.service.repository.BotParametersService;
+import org.boottrading.service.BotParametersService;
 
 public class BotParametersForm {
     private String nameBot;
