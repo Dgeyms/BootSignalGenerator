@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Bot create</title>
+</head>
+
+<body>
+    <h1>Bot create</h1>
+    <h3>Parameters</h3>
+
+    <label for="myInput">Enter name bot:</label>
+    <input type="text" id="myInput" name="myInput"><br>
+    <p></p>
+
+    <label for="pair">Enter token pair:</label>
+    <select id="pair" name="pair">
+        <option th:each="pair : ${listTokenPair}" th:value="${tokenPait.id}" th:text="${car.name}"></option> <br>
+    </select>
+    <p></p>
+
+    <label>Choose trading direction:</label>
+
+</body>
+</html>

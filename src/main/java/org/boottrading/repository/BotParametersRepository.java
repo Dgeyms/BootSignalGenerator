@@ -1,8 +1,9 @@
 package org.boottrading.repository;
 
 // Accepts parameters bot from databases
-public class BotParametersRepositoty {
+public class BotParametersRepository {
     public List<String> getTokenPairFromDataBase() {
-        return ert;
+
+        return List < String > ert;
     }
 }

@@ -17,10 +17,13 @@ public class BotParametersForm {
         LONG, SHORT
     }
 
-    List listTokenPair = privateGetTokenPairFromDataBase();
+    public BotParametersForm(List<String> listTokenPair) {
+        this.listTokenPair = getTokenPairFromDataBase();
+    }
+
     BotParametersService botParametersService = new BotParametersService();
 
-    private List<String> privateGetTokenPairFromDataBase() {
+    private List<String> getTokenPairFromDataBase() {
         return botParametersService.getTokenPairFromDataBase();
     }
 }
